@@ -34,6 +34,7 @@ from qgis.core import QgsProcessingProvider
 from .Upstream_Downstream import UpstreamDownstream
 from .Water_Netw_Constructor import WaterNetwConstructor
 from .Flow_Path_Calc import FlowPathCalc
+from .Upstream_Area_Calc import UpstreamAreaCalc
 from qgis.PyQt.QtGui import QIcon
 import os
 pluginPath = os.path.dirname(__file__)
@@ -61,6 +62,8 @@ class WaterNetsProvider(QgsProcessingProvider):
         self.addAlgorithm(UpstreamDownstream())
         self.addAlgorithm(WaterNetwConstructor())
         self.addAlgorithm(FlowPathCalc())
+        self.addAlgorithm(UpstreamAreaCalc())
+        self.addAlgortihm()
         # add additional algorithms here
         # self.addAlgorithm(MyOtherAlgorithm())
 
