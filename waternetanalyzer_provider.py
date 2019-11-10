@@ -63,7 +63,6 @@ class WaterNetsProvider(QgsProcessingProvider):
         self.addAlgorithm(WaterNetwConstructor())
         self.addAlgorithm(FlowPathCalc())
         self.addAlgorithm(UpstreamAreaCalc())
-        self.addAlgortihm()
         # add additional algorithms here
         # self.addAlgorithm(MyOtherAlgorithm())
 
