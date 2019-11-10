@@ -34,7 +34,7 @@ from qgis.core import QgsProcessingProvider
 from .Upstream_Downstream import UpstreamDownstream
 from .Water_Netw_Constructor import WaterNetwConstructor
 from .Flow_Path_Calc import FlowPathCalc
-from .upstream_pegel import PegelImEinzugsgebiet
+from .Upstream_Gauges import UpstreamGauges
 from .Upstream_Area_Calc import UpstreamAreaCalc
 from qgis.PyQt.QtGui import QIcon
 import os
@@ -64,7 +64,7 @@ class WaterNetsProvider(QgsProcessingProvider):
         self.addAlgorithm(WaterNetwConstructor())
         self.addAlgorithm(FlowPathCalc())
         self.addAlgorithm(UpstreamAreaCalc())
-        self.addAlgorithm(PegelImEinzugsgebiet())
+        self.addAlgorithm(UpstreamGauges())
         # add additional algorithms here
         # self.addAlgorithm(MyOtherAlgorithm())
 

@@ -6,7 +6,7 @@ from qgis.core import QgsProcessingParameterFeatureSink
 import processing
 
 
-class PegelImEinzugsgebiet(QgsProcessingAlgorithm):
+class UpstreamGauges(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         return self.tr(""" Workflow: 
