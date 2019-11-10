@@ -37,16 +37,6 @@ import numpy as np
 
 class UpstreamAreaCalc(QgsProcessingAlgorithm):
 
-    def shortHelpString(self):
-        return self.tr(""" Tool to compute the area of all watersheds upstream of a selected segment in a river network.
-        
-        Workflow: 
-        1. select one line segment form the river network.
-        2. In the drop-down lists choose the needed input layers. 
-        3. Click on \"Run\"
-        
-        """)
-
     def name(self):
         return '4 Calculate upstream area'
 
@@ -65,20 +55,21 @@ class UpstreamAreaCalc(QgsProcessingAlgorithm):
     def createInstance(self):
         return UpstreamAreaCalc()
 
-    def shortHelpString(self):
-        return self.tr(""" Workflow: 
-        TODO:
-        1. select the layer in the drop-down list \"The water network\".
-        2. select the column/field to be accumulated along the flow path \"Field to calculate\"
-        3. In the drop-down lists chose the columns in the attribute table created by the tool \"1 Water Network Constructor\"
-        4. Click on \"Run\"
-        """)
-
     def initAlgorithm(self, config=None):
         self.addParameter(QgsProcessingParameterVectorLayer('fliessgewaessernetz', 'Fliessgewaessernetz', types=[QgsProcessing.TypeVectorLine], defaultValue=None))
         self.addParameter(QgsProcessingParameterVectorLayer('teileinzugsgebiete', 'Teileinzugsgebiete', types=[QgsProcessing.TypeVectorPolygon], defaultValue=None))
         self.addParameter(QgsProcessingParameterFileDestination('GesamtflcheDesEinzugsgebietes', 'Gesamtfläche des Einzugsgebietes', optional=True, fileFilter='HTML files (*.html)', createByDefault=True, defaultValue=None))
         
+    def shortHelpString(self):
+        return self.tr(""" Tool to compute the area of all watersheds upstream of a selected segment in a river network.
+        
+        Workflow: 
+        1. select one line segment form the river network.
+        2. In the drop-down lists choose the needed input layers. 
+        3. Click on \"Run\"
+        
+        """)
+
     def processAlgorithm(self, parameters, context, model_feedback):
         # Use a multi-step feedback, so that individual child algorithm progress reports are adjusted for the
         # overall progress through the model
