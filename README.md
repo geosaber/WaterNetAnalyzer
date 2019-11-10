@@ -30,3 +30,9 @@ You can also choose other columns than "NET_ID","NET_TO" and "NET_FROM", if you 
 
 ## 3 Calculate along flow path
 This tool can calculate how amounts of water or other loads are accumulated along the flow path. Select a column in the attribute table to accumulate (it has to be numeric). The tool will create a new column with the result.
+
+## 4 Calculate Upstream Area
+This tool computes the area of all watersheds upstream of a selected segment in a river network. The watershed have to be provided as polygon shapefile. The tool returns a html file containing basic statistics of the wanted watersheds.
+
+## 5 Extract Upstream Gauges
+This tool extracts the river gauges placed in the watersheds upstream of a selected segment in a river network. The gauges have to be provided as a point shapefile. The tool creates a new shapefile contataining the wanted gauges.
