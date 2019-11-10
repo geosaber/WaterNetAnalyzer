@@ -10,7 +10,6 @@ class UpstreamGauges(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         return self.tr(""" Tool to extract the river gauges placed in the watersheds upstream of a selected segment in a river network.
-
         Workflow: 
         1. select one line segment.
         2. In the drop-down lists chose the neede input layers. 
