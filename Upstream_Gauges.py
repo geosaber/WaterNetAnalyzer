@@ -9,8 +9,7 @@ import processing
 class UpstreamGauges(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
-        return self.tr(""" 
-        Tool to extract the river gauges placed in the watersheds upstream of a selected segment in a river network.
+        return self.tr(""" Tool to extract the river gauges placed in the watersheds upstream of a selected segment in a river network.
 
         Workflow: 
         1. select one line segment.
@@ -94,4 +93,4 @@ class UpstreamGauges(QgsProcessingAlgorithm):
         return ''
 
     def createInstance(self):
-        return PegelImEinzugsgebiet()
+        return UpstreamGauges()
