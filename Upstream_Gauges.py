@@ -79,10 +79,10 @@ class UpstreamGauges(QgsProcessingAlgorithm):
         return results
 
     def name(self):
-        return 'Pegel im Einzugsgebiet'
+        return '5 Extract Upstream Gauges'
 
     def displayName(self):
-        return 'Pegel im Einzugsgebiet'
+        return self.tr(self.name())
 
     def group(self):
         return ''
