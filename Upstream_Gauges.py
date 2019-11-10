@@ -94,4 +94,4 @@ class UpstreamGauges(QgsProcessingAlgorithm):
         return ''
 
     def createInstance(self):
-        return UpstreamGauges()
+        return PegelImEinzugsgebiet()
