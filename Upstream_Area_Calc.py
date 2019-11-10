@@ -37,6 +37,17 @@ import numpy as np
 
 class UpstreamAreaCalc(QgsProcessingAlgorithm):
 
+        def shortHelpString(self):
+        return self.tr(""" 
+        Tool to compute the area of all watersheds upstream of a selected segment in a river network.
+        
+        Workflow: 
+        1. select one line segment form the river network.
+        2. In the drop-down lists choose the needed input layers. 
+        3. Click on \"Run\"
+        
+        """)
+
     def name(self):
         return '4 Calculate upstream area'
 
