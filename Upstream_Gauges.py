@@ -72,6 +72,9 @@ class UpstreamGauges(QgsProcessingAlgorithm):
 
     def name(self):
         return '5 Extract Upstream Gauges'
+    
+    def tr(self, string):
+        return QCoreApplication.translate('Processing', string)
 
     def displayName(self):
         return '5 Extract Upstream Gauges'
